@@ -6,13 +6,7 @@ public class WeaponChange : MonoBehaviour
 {
     public GameObject BitGun;
     public GameObject MashineGun;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    
+    // Start is called before the first frame update   
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
