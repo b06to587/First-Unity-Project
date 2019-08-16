@@ -6,10 +6,14 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField]
+    public bool notTouch = true;
+    //움직이는 속도
+    [SerializeField]
     private float walkSpeed;
 
     private Rigidbody myRigidBody;
 
+    //카메라
     Camera viewCamera;
     private CapsuleCollider capsuleCollider; 
     // Start is called before the first frame update
@@ -23,10 +27,12 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        PAlive();
         Move();
         GroundCheck();
     }
 
+     //움직이는 함수
     private void Move(){
         Vector3 moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
         Vector3 _velocity = moveInput.normalized * walkSpeed;
@@ -34,6 +40,7 @@ public class Player : MonoBehaviour
         myRigidBody.MovePosition(transform.position + _velocity * Time.deltaTime);
     }
 
+    //바닥체크
     private void GroundCheck(){
         Ray ray = viewCamera.ScreenPointToRay (Input.mousePosition);
         Plane groundPlane = new Plane ( Vector3.up, Vector3.zero);
@@ -45,8 +52,13 @@ public class Player : MonoBehaviour
         }
     }   
 
+    //바라보는 방향
     public void LookAt(Vector3 lookPoint){
         Vector3 heightCorrectedPoint = new Vector3(lookPoint.x, transform.position.y, lookPoint.z);
         transform.LookAt(heightCorrectedPoint);
+    }
+
+    private void PAlive(){
+        
     }
 }
