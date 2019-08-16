@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField]
-    private bool gameOver = false;
+    public static bool gameOver = false;
     public Player player;
     // Start is called before the first frame update
     void Start()
@@ -19,8 +18,8 @@ public class GameManager : MonoBehaviour
         DeadCheck();
     }
     public void DeadCheck(){
-        if(player.notTouch == true){
-            gameOver = true;
-        }
+//        if(player.notTouch == true){
+   //         gameOver = true;
+   //     }
     }
 }
