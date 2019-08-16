@@ -6,7 +6,6 @@ public class Fire : MonoBehaviour
 {
     public GameObject Bullet;
     public Transform FirePos;
-
     
 
     void Update()
@@ -14,15 +13,28 @@ public class Fire : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             //복제한다. //'Bullet'을 'FirePos.transform.position' 위치에 'FirePos.transform.rotation' 회전값으로.
-            Instantiate(Bullet, FirePos.transform.position, FirePos.transform.rotation);
+            if (WeaponChange.WeaponNum == 0)
+            {
+                Instantiate(Bullet, FirePos.transform.position, FirePos.transform.rotation);
+            }
+            
+            else if(WeaponChange.WeaponNum == 1)
+            {
+                Instantiate(Bullet, FirePos.transform.position, FirePos.transform.rotation);
+                Instantiate(Bullet, FirePos.transform.position, FirePos.transform.rotation);
+                Instantiate(Bullet, FirePos.transform.position, FirePos.transform.rotation);
+            }
 
             Debug.Log("Fire");
 
-            //GetComponent<>
 
-            GameObject.Find("FirePosMachinGun");
+            //GetComponent<>
+            
+
+
         }
 
+        
 
     }
         
