@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public static float weaponBitGunDamage = 0.5f;
+    public static float weaponBitGunDamage = 1.5f;
     public static float weaponBitGunDistance = 0.1f;
-    public static float weaponMachineGunDamage = 1f;
+    public static float weaponMachineGunDamage = 0.8f;
     public static float weaponMachineGunDistance = 0.05f;
 
     public static float weaponDamage = weaponBitGunDamage;
