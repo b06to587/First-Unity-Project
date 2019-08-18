@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class WeaponUpgrade : MonoBehaviour
 {
-    
-    
+
+
     void Start()
     {
-        
+
     }
 
-    
+
     void Update()
     {
-        if(Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1))
         {
             Debug.Log("Distance Upgrade");
             DistanceUpgrade();
@@ -28,13 +28,34 @@ public class WeaponUpgrade : MonoBehaviour
     }
 
 
-    public void DistanceUpgrade()
-    {
-        Bullet.weaponDistance += 0.05f;
-    }
-
     public void DamageUpgrade()
     {
-        Bullet.weaponDamage += 0.25f;
+        if (WeaponChange.WeaponNum == 0)
+        {
+            Bullet.weaponBitGunDamage += 0.25f;
+            Bullet.weaponDamage = Bullet.weaponBitGunDamage;
+        }
+        else if (WeaponChange.WeaponNum == 1)
+        {
+            Bullet.weaponMachineGunDamage += 0.25f;
+            Bullet.weaponDamage = Bullet.weaponMachineGunDamage;
+        }
     }
+
+    public void DistanceUpgrade()
+    {
+        if (WeaponChange.WeaponNum == 0)
+        {
+            Bullet.weaponBitGunDistance += 0.05f;
+            Bullet.weaponDistance = Bullet.weaponBitGunDistance;
+        }
+        else if (WeaponChange.WeaponNum == 1)
+        {
+            Bullet.weaponMachineGunDistance += 0.05f;
+            Bullet.weaponDistance = Bullet.weaponMachineGunDistance;
+        }
+
+    }
+
+    
 }

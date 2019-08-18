@@ -15,6 +15,7 @@ public class WeaponChange : MonoBehaviour
         }
     }
 
+
     public static int WeaponNum = 0;
     public void Change()
     {

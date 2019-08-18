@@ -25,8 +25,18 @@ public class Bullet : MonoBehaviour
         Destroy(this.gameObject, weaponDistance);
     }
 
+    public void OnTriggerEnter(Collider other)
+    {
+
+        if (other.tag == "Wall")     
+        {
+            Destroy(this.gameObject);
+        }
+
+    }
 
 
-    
+
+
 
 }
