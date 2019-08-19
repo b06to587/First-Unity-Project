@@ -29,6 +29,7 @@ public class Spawner : MonoBehaviour
     {   
         WallMover();
         WallShrink();
+        WallDestorychecker();
     }
     IEnumerator createMorePentagon(){
         while(true){
@@ -67,6 +68,17 @@ public class Spawner : MonoBehaviour
         float rate =  1-((float)1/wallMoveSpeed);
         for (int i = 0; i <Size; i++){
             Wall[i].transform.localScale *= rate;
+        }
+    }
+        private void WallDestorychecker(){
+            for(int i = 0; i<Wall.Count; i++){
+           if(Wall[i].GetComponent<Wall>().isDestroy == true){
+            int big = i/5;
+            for(int j = 0; j<=5*big+4; j++){
+            Wall[j].GetComponent<Renderer>().enabled=false;
+            Wall[j].GetComponent<BoxCollider>().enabled=false;
+            }
+           }    
         }
     }
 }
