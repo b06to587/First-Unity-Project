@@ -21,21 +21,23 @@ public class Spawner : MonoBehaviour
     
     // Start is called before the first frame update
     void Start(){
-        creatPentagon();
+        StartCoroutine(createMorePentagon());
     }
 
     // Update is called once per frame
     void Update()
     {   
-        if(Input.GetButtonDown("Fire2")){creatPentagon();
-        nowWall+=5;
-        goalWall+=5;
-        }
         WallMover();
         WallShrink();
-   
     }
-
+    IEnumerator createMorePentagon(){
+        while(true){
+            creatPentagon();
+            nowWall = nowWall +5;
+            goalWall = goalWall + 5;
+            yield return new WaitForSeconds(5f);
+        }
+    }
     public void creatPentagon(){
         for(int i=nowWall; i<=goalWall; i++){
             int k = i %5;
@@ -50,30 +52,21 @@ public class Spawner : MonoBehaviour
             int k = j %5;
             Wall[j].transform.parent=null;
             Wall[j].transform.rotation=Quaternion.Euler(new Vector3(0,pentagon[k],0));
-
-
         }//end of for(1);
-
- 
-
-
     }//end of createPentaagon()
-
     public void WallMover(){
-        for(int i = 0; i<=goalWall;i++){
-       
-            Vector3 velocity = Wall[i].transform.position-center.transform.position;
-            Wall[i].transform.position-= velocity/wallMoveSpeed;
-     
+        int Size = Wall.Count;
+        for(int z = 0; z< Size;z++){
+            Vector3 velocity = Wall[z].transform.position - center.transform.position;
+            Wall[z].transform.position-= velocity/wallMoveSpeed;
         }
     }
 
     private void WallShrink(){
+        int Size = Wall.Count;
         float rate =  1-((float)1/wallMoveSpeed);
-        for (int i = 0; i <=goalWall; i++)
-        {
+        for (int i = 0; i <Size; i++){
             Wall[i].transform.localScale *= rate;
         }
     }
-  
 }
