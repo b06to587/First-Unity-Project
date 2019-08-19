@@ -30,7 +30,7 @@ public class Wall : MonoBehaviour
 
         if (Hp <= 0)
         {
-            Destroy(this.gameObject);
+            this.gameObject.GetComponent<Renderer>().enabled=false;
         }
 
     }
