@@ -211,6 +211,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Name
+      value: 'center '
+      objectReference: {fileID: 0}
     - target: {fileID: 6718338380951812354, guid: 50d5b429bbc49fd42ae273eb9774038e,
         type: 3}
       propertyPath: m_Name
@@ -739,7 +743,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1398320850}
   m_Layer: 0
-  m_Name: center (Missing Prefab)
+  m_Name: 'center '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -941,6 +945,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 312747205140413453, guid: a9abc358d1861a445ad399be1a397f84,
+        type: 3}
+      propertyPath: Spawner
+      value: 
+      objectReference: {fileID: 1610013366}
     - target: {fileID: 312747205140413454, guid: a9abc358d1861a445ad399be1a397f84,
         type: 3}
       propertyPath: m_Name
@@ -1001,11 +1010,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 312747205140413453, guid: a9abc358d1861a445ad399be1a397f84,
-        type: 3}
-      propertyPath: Spawner
-      value: 
-      objectReference: {fileID: 1610013366}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9abc358d1861a445ad399be1a397f84, type: 3}
 --- !u!1001 &2773954155629425120

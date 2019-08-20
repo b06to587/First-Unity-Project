@@ -7,6 +7,7 @@ public class Wall : MonoBehaviour
     
     public float Hp = 5; //Hp는 나중에 난수로다가 갔으면 좋겠네
     public int identitnumbe=0;
+    public bool isDestroy =false;
     public GameManager gameManager;
     void Start()
     {
@@ -30,7 +31,7 @@ public class Wall : MonoBehaviour
 
         if (Hp <= 0)
         {
-            Destroy(this.gameObject);
+            isDestroy= true;
         }
 
     }
