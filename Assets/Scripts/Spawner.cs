@@ -5,14 +5,15 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public GameObject center;
+    public Vector2 secondsBetweenSpawnsMinMax;  //벽 생성 최소 최대 속도
     public GameObject prefabWall;
     public Wall identityWall;
-    public int SpawnerToidentitynumber=0;
     public List<GameObject> Wall = new List<GameObject>(); 
-    public Quaternion ori = Quaternion.Euler(new Vector3(0,0,0));
-    public Quaternion plus = Quaternion.Euler(new Vector3(0,72,0));
     public int[] pentagon = new int[5] {108,36,-36,-108,180};
-    public int wallMoveSpeed=1000;
+    private float wallMoveSpeed;
+    private float nextSpawnTime;
+    [SerializeField]
+    private Vector2 wallMoveSpeedMinMax;
 
     public int WallPosX =10; //월 생성 위치
 
@@ -27,6 +28,7 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
+        Debug.Log(wallMoveSpeed);
         WallMover();
         WallShrink();
         WallDestorychecker();
@@ -36,7 +38,9 @@ public class Spawner : MonoBehaviour
             creatPentagon();
             nowWall = nowWall +5;
             goalWall = goalWall + 5;
-            yield return new WaitForSeconds(5f);
+            float secondsBetweenSpawns = Mathf.Lerp(secondsBetweenSpawnsMinMax.y,secondsBetweenSpawnsMinMax.x, Difficulty.GetDifficultyPercent());
+            nextSpawnTime = secondsBetweenSpawns;
+            yield return new WaitForSeconds(nextSpawnTime);
         }
     }
     public void creatPentagon(){
@@ -57,28 +61,28 @@ public class Spawner : MonoBehaviour
     }//end of createPentaagon()
     public void WallMover(){
         int Size = Wall.Count;
+        wallMoveSpeed = Mathf.Lerp(wallMoveSpeedMinMax.x, wallMoveSpeedMinMax.y , Difficulty.GetDifficultyPercent());
         for(int z = 0; z< Size;z++){
             Vector3 velocity = Wall[z].transform.position - center.transform.position;
-            Wall[z].transform.position-= velocity/wallMoveSpeed;
+            Wall[z].transform.position -= velocity/wallMoveSpeed;
         }
     }
 
     private void WallShrink(){
         int Size = Wall.Count;
-        float rate =  1-((float)1/wallMoveSpeed);
+        float rate =  ((float)1/wallMoveSpeed);
         for (int i = 0; i <Size; i++){
-            Wall[i].transform.localScale *= rate;
+            Wall[i].transform.localScale -= new Vector3(rate,0,rate);
         }
     }
-        private void WallDestorychecker(){
-            for(int i = 0; i<Wall.Count; i++){
-           if(Wall[i].GetComponent<Wall>().isDestroy == true){
-            int big = i/5;
-            for(int j = 0; j<=5*big+4; j++){
-            Wall[j].GetComponent<Renderer>().enabled=false;
-            Wall[j].GetComponent<BoxCollider>().enabled=false;
-            }
-           }    
+    private void WallDestorychecker(){
+        for(int i = 0; i<Wall.Count; i++){
+            if(Wall[i].GetComponent<Wall>().isDestroy == true){
+                int big = i/5;
+                for(int j = 0; j<=5*big+4; j++){
+                    Wall[j].SetActive(false);
+                }
+            }    
         }
     }
 }
