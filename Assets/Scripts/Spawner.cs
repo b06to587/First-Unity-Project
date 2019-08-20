@@ -28,7 +28,7 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
-        Debug.Log(wallMoveSpeed);
+        //Debug.Log(wallMoveSpeed);
         WallMover();
         WallShrink();
         WallDestorychecker();

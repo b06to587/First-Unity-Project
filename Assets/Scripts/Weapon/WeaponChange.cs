@@ -5,7 +5,7 @@ using UnityEngine;
 public class WeaponChange : MonoBehaviour
 {
     public GameObject BitGun;
-    public GameObject MashineGun;
+    public GameObject MachineGun;
     // Start is called before the first frame update   
     void Update()
     {
@@ -22,7 +22,7 @@ public class WeaponChange : MonoBehaviour
         if(WeaponNum == 0)
         {
             BitGun.SetActive(false);
-            MashineGun.SetActive(true);
+            MachineGun.SetActive(true);
             Bullet.weaponDamage = Bullet.weaponMachineGunDamage;
             Bullet.weaponDistance = Bullet.weaponMachineGunDistance;
             WeaponNum = 1;
@@ -30,7 +30,7 @@ public class WeaponChange : MonoBehaviour
         else if(WeaponNum == 1)
         {
             BitGun.SetActive(true);
-            MashineGun.SetActive(false);
+            MachineGun.SetActive(false);
             Bullet.weaponDamage = Bullet.weaponBitGunDamage;
             Bullet.weaponDistance = Bullet.weaponBitGunDistance;
             WeaponNum = 0;
