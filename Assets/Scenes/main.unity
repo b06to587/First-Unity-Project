@@ -657,7 +657,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 4
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!136 &1389031523
 CapsuleCollider:
@@ -945,16 +945,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 312747205140413453, guid: a9abc358d1861a445ad399be1a397f84,
-        type: 3}
-      propertyPath: Spawner
-      value: 
-      objectReference: {fileID: 1610013366}
     - target: {fileID: 312747205140413454, guid: a9abc358d1861a445ad399be1a397f84,
         type: 3}
       propertyPath: m_Name
       value: Gamemanager
       objectReference: {fileID: 0}
+    - target: {fileID: 312747205140413453, guid: a9abc358d1861a445ad399be1a397f84,
+        type: 3}
+      propertyPath: Spawner
+      value: 
+      objectReference: {fileID: 1610013366}
     - target: {fileID: 312747205140413452, guid: a9abc358d1861a445ad399be1a397f84,
         type: 3}
       propertyPath: m_LocalPosition.x
