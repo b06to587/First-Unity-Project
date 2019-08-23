@@ -1159,5 +1159,25 @@ PrefabInstance:
       propertyPath: pentagon.Array.data[4]
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 2773954157054552919, guid: a51e75e6dfe52ea45ab1f89a1cd6e700,
+        type: 3}
+      propertyPath: wallMoveSpeedMinMax.x
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 2773954157054552919, guid: a51e75e6dfe52ea45ab1f89a1cd6e700,
+        type: 3}
+      propertyPath: wallMoveSpeedMinMax.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2773954157054552919, guid: a51e75e6dfe52ea45ab1f89a1cd6e700,
+        type: 3}
+      propertyPath: secondsBetweenSpawnsMinMax.x
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 2773954157054552919, guid: a51e75e6dfe52ea45ab1f89a1cd6e700,
+        type: 3}
+      propertyPath: secondsBetweenSpawnsMinMax.y
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a51e75e6dfe52ea45ab1f89a1cd6e700, type: 3}

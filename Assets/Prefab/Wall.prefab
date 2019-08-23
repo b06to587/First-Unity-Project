@@ -122,6 +122,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hp: 5
+  PickRandomHp: 0
   identitnumbe: 0
+  isDestroy: 0
+  red: {fileID: 2100000, guid: fa12b5276be3d204fb61eceadf4a2ed1, type: 2}
+  Orange: {fileID: 2100000, guid: 1a63c28c58e58f54385a0b2e5607dd27, type: 2}
+  Yellow: {fileID: 2100000, guid: 0fc9e56ec0995a142888edd280970c9c, type: 2}
+  Green: {fileID: 2100000, guid: 1afd1f877a2ec964c8875ec82f1fb484, type: 2}
+  Blue: {fileID: 2100000, guid: 373e521a46fc30b448154e87c17cf4d9, type: 2}
+  Navy: {fileID: 2100000, guid: 832fd7844b76707438c3c433f2f05cc5, type: 2}
+  Purple: {fileID: 2100000, guid: 0e77f0d82caa1984ba5e175781745600, type: 2}
   gameManager: {fileID: 312747205140413453, guid: a9abc358d1861a445ad399be1a397f84,
     type: 3}
+  rainbow: 00000000010000000200000003000000040000000500000006000000
