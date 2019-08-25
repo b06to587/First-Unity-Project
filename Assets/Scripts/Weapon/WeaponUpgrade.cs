@@ -32,10 +32,15 @@ public class WeaponUpgrade : MonoBehaviour
     {
         if (WeaponChange.WeaponNum == 0)
         {
+            Bullet.weaponKnifeDamage += 0.25f;
+            Bullet.weaponDamage = Bullet.weaponKnifeDamage;
+        }
+        else if (WeaponChange.WeaponNum == 1)
+        {
             Bullet.weaponBitGunDamage += 0.25f;
             Bullet.weaponDamage = Bullet.weaponBitGunDamage;
         }
-        else if (WeaponChange.WeaponNum == 1)
+        else if (WeaponChange.WeaponNum == 2)
         {
             Bullet.weaponMachineGunDamage += 0.25f;
             Bullet.weaponDamage = Bullet.weaponMachineGunDamage;
@@ -46,10 +51,15 @@ public class WeaponUpgrade : MonoBehaviour
     {
         if (WeaponChange.WeaponNum == 0)
         {
+            Bullet.weaponKnifeDistance += 0.08f;
+            Bullet.weaponDistance = Bullet.weaponKnifeDistance;
+        }
+        else if (WeaponChange.WeaponNum == 1)
+        {
             Bullet.weaponBitGunDistance += 0.05f;
             Bullet.weaponDistance = Bullet.weaponBitGunDistance;
         }
-        else if (WeaponChange.WeaponNum == 1)
+        else if (WeaponChange.WeaponNum == 2)
         {
             Bullet.weaponMachineGunDistance += 0.05f;
             Bullet.weaponDistance = Bullet.weaponMachineGunDistance;

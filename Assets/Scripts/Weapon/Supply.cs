@@ -14,10 +14,8 @@ public class Supply : MonoBehaviour
     }
 
     float time = 0;
-    float supplyEnchantTime = 0;
     void Update()
     {
-        supplyEnchantTime += Time.deltaTime;
        // if (supplyEnchantTime >= 5)
         //{
         //    Bullet.weaponDamage -= 10;

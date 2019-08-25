@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WeaponChange : MonoBehaviour
 {
+    public GameObject Knife;
     public GameObject BitGun;
     public GameObject MachineGun;
     // Start is called before the first frame update   
@@ -21,21 +22,32 @@ public class WeaponChange : MonoBehaviour
     {
         if(WeaponNum == 0)
         {
-            BitGun.SetActive(false);
-            MachineGun.SetActive(true);
-            Bullet.weaponDamage = Bullet.weaponMachineGunDamage;
-            Bullet.weaponDistance = Bullet.weaponMachineGunDistance;
+            Knife.SetActive(false);
+            BitGun.SetActive(true);
+            //MachineGun.SetActive(false);
+            Bullet.weaponDamage = Bullet.weaponBitGunDamage;
+            Bullet.weaponDistance = Bullet.weaponBitGunDistance;
             WeaponNum = 1;
         }
         else if(WeaponNum == 1)
         {
-            BitGun.SetActive(true);
+            //Knife.SetActive(false);
+            BitGun.SetActive(false);
+            MachineGun.SetActive(true);
+            Bullet.weaponDamage = Bullet.weaponMachineGunDamage;
+            Bullet.weaponDistance = Bullet.weaponMachineGunDistance;
+            WeaponNum = 2;
+        }
+
+        else if (WeaponNum == 2)
+        {
+            Knife.SetActive(true);
+            //BitGun.SetActive(false);
             MachineGun.SetActive(false);
-            Bullet.weaponDamage = Bullet.weaponBitGunDamage;
-            Bullet.weaponDistance = Bullet.weaponBitGunDistance;
+            Bullet.weaponDamage = Bullet.weaponKnifeDamage;
+            Bullet.weaponDistance = Bullet.weaponKnifeDistance;
             WeaponNum = 0;
         }
-        
     }
 }
 
