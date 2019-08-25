@@ -11,6 +11,13 @@ public class Fire : MonoBehaviour
 
     public Animation Ani;
 
+
+    void Start()
+    {
+        //StartCoroutine(FadeIn());
+    }
+
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -18,14 +25,16 @@ public class Fire : MonoBehaviour
             //복제한다. //'Bullet'을 'FirePos.transform.position' 위치에 'FirePos.transform.rotation' 회전값으로.
             if (WeaponChange.WeaponNum == 0)
             {
+
                 Ani.Play("Swing");
                 Instantiate(Bullet, FirePos0.transform.position, FirePos0.transform.rotation);
                 Instantiate(Bullet, FirePos1.transform.position, FirePos1.transform.rotation);
                 Instantiate(Bullet, FirePos2.transform.position, FirePos2.transform.rotation);
                 Debug.Log("fire Knife");
                 
+
             }
-            
+
             else if(WeaponChange.WeaponNum == 1)
             {
                 Instantiate(Bullet, FirePos0.transform.position, FirePos0.transform.rotation);
@@ -40,17 +49,7 @@ public class Fire : MonoBehaviour
                 Debug.Log("Fire MachineGun");
             }
 
-
-
-
-            //GetComponent<>
-
-
-
         }
-
-        
-
     }
-        
+
 }

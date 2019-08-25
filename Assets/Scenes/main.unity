@@ -406,7 +406,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1105141211}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 9.945102, y: 1.1828, z: 1.3533003}
@@ -612,7 +612,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bullet: {fileID: 9182968997888388492, guid: 04e181e2a8f640346bb8aff2338a246b, type: 3}
-  FirePos0: {fileID: 0}
+  FirePos0: {fileID: 1921254314}
   FirePos1: {fileID: 0}
   FirePos2: {fileID: 0}
   Ani: {fileID: 0}
@@ -855,13 +855,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1593600724}
-  m_LocalRotation: {x: 0.061677024, y: 0.20666479, z: 0.22135058, w: 0.9510465}
+  m_LocalRotation: {x: 0.07800189, y: 0.13521236, z: 0.2161385, w: 0.9638037}
   m_LocalPosition: {x: 1.52, y: -0.61, z: 7.84}
   m_LocalScale: {x: 8.333334, y: 8.333332, z: 8.333335}
   m_Children: []
   m_Father: {fileID: 1823504880}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 1.48, y: 24.869001, z: 26.53}
+  m_LocalEulerAnglesHint: {x: 5.2730002, y: 17.194, z: 26.077002}
 --- !u!1 &1610013366 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2773954157054552918, guid: a51e75e6dfe52ea45ab1f89a1cd6e700,
@@ -1153,7 +1153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bullet: {fileID: 3256906717315335529, guid: 9645e320fd5efca42b4134c65a0f7652, type: 3}
-  FirePos0: {fileID: 0}
+  FirePos0: {fileID: 2082308027}
   FirePos1: {fileID: 0}
   FirePos2: {fileID: 0}
   Ani: {fileID: 2014075752}
@@ -1245,16 +1245,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 312747205140413454, guid: a9abc358d1861a445ad399be1a397f84,
-        type: 3}
-      propertyPath: m_Name
-      value: Gamemanager
-      objectReference: {fileID: 0}
     - target: {fileID: 312747205140413453, guid: a9abc358d1861a445ad399be1a397f84,
         type: 3}
       propertyPath: Spawner
       value: 
       objectReference: {fileID: 1610013366}
+    - target: {fileID: 312747205140413454, guid: a9abc358d1861a445ad399be1a397f84,
+        type: 3}
+      propertyPath: m_Name
+      value: Gamemanager
+      objectReference: {fileID: 0}
     - target: {fileID: 312747205140413452, guid: a9abc358d1861a445ad399be1a397f84,
         type: 3}
       propertyPath: m_LocalPosition.x
