@@ -16,7 +16,7 @@ public class Fire : MonoBehaviour
             if (WeaponChange.WeaponNum == 0)
             {
                 Instantiate(Bullet, FirePos.transform.position, FirePos.transform.rotation);
-                Debug.Log("Fire BitGun");
+                //Debug.Log("Fire BitGun");
             }
             
             else if(WeaponChange.WeaponNum == 1)
@@ -24,20 +24,10 @@ public class Fire : MonoBehaviour
                 Instantiate(Bullet, FirePos.transform.position, FirePos.transform.rotation);
                 Instantiate(Bullet, FirePos.transform.position, FirePos.transform.rotation);
                 Instantiate(Bullet, FirePos.transform.position, FirePos.transform.rotation);
-                Debug.Log("Fire MachineGun");
+                //Debug.Log("Fire MachineGun");
             }
-
-            
-
-
             //GetComponent<>
-            
-
 
         }
-
-        
-
-    }
-        
+    }    
 }

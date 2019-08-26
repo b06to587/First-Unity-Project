@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Wall : MonoBehaviour
 {
-    
+    [SerializeField]
+    private GameObject center;
+    public System.Action<Wall> OnWallReturn;
     public float Hp = 5; //Hp는 나중에 난수로다가 갔으면 좋겠네
     public int PickRandomHp;
-    public int identitnumbe=0;
     public bool isDestroy =false;
     public Material Red;
     public Material Orange;
@@ -16,18 +17,19 @@ public class Wall : MonoBehaviour
     public Material Blue;
     public Material Navy;
     public Material Purple;
-    public GameManager gameManager;
     public int[] rainbow = new int[7] {0,1,2,3,4,5,6};
+    [SerializeField]
+    private Vector2 wallMoveSpeedMinMax;
+    private float wallMoveSpeed;
     void Start()
     {
         giveToWallHpType();
-
     }
-    
-    
+
     void Update()
     {
-
+        WallMove();
+        WallShrink();
     }
 
     public void OnTriggerEnter(Collider other)
@@ -36,7 +38,7 @@ public class Wall : MonoBehaviour
         if (other.tag == "Bullet")     //충돌상대 필터링
         {
             Hp -= Bullet.weaponDamage;
-            Debug.Log(Hp);
+            //Debug.Log(Hp);
         }
 
         if (Hp <= 0)
@@ -53,13 +55,13 @@ public class Wall : MonoBehaviour
             break;
 
             case 2:
-             PickRandomHp-=1;
+            PickRandomHp-=1;
             Hp=2;
             gameObject.GetComponent<MeshRenderer>().material= Orange;
             break;
 
             case 3:
-             PickRandomHp-=1;
+            PickRandomHp-=1;
             Hp=3;
             gameObject.GetComponent<MeshRenderer>().material= Yellow;
             break;
@@ -81,14 +83,8 @@ public class Wall : MonoBehaviour
             Hp=6;
             gameObject.GetComponent<MeshRenderer>().material= Navy;
             break;
-
-
-
             }
-
-            
         }
-
     }
 
     public void giveToWallHpType(){
@@ -97,9 +93,7 @@ public class Wall : MonoBehaviour
            case 0 : 
            gameObject.GetComponent<MeshRenderer>().material= Red;
            Hp= 1;
-            break;
-
-         
+            break;         
            case 1 :
             gameObject.GetComponent<MeshRenderer>().material= Orange;
             Hp=2;
@@ -129,10 +123,16 @@ public class Wall : MonoBehaviour
 
     }
 
-    /*
-    public void Damage()
-    {
-        Hp -= Bullet.bulletDamage;
+    public void WallMove(){
+        wallMoveSpeed = Mathf.Lerp(wallMoveSpeedMinMax.x, wallMoveSpeedMinMax.y , Difficulty.GetDifficultyPercent());
+        Vector3 velocity = transform.position - center.transform.position;  
+        transform.position -= velocity/wallMoveSpeed;
     }
-    */
+
+    private void WallShrink(){
+        float rate =  ((float)1/wallMoveSpeed);
+        if(transform.localScale.z > 4)
+        transform.localScale -= new Vector3(0,0,rate * 10.5f);
+    }
+
 }

@@ -8,6 +8,7 @@ TagManager:
   - Wall
   - FirePosMachineGun
   - FirePosBitGun
+  - WallSet
   layers:
   - Default
   - TransparentFX
