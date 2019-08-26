@@ -31,8 +31,6 @@ public class Fire : MonoBehaviour
                 Instantiate(Bullet, FirePos1.transform.position, FirePos1.transform.rotation);
                 Instantiate(Bullet, FirePos2.transform.position, FirePos2.transform.rotation);
                 Debug.Log("fire Knife");
-                
-
             }
 
             else if(WeaponChange.WeaponNum == 1)
