@@ -5,22 +5,17 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static bool gameOver = false;
-   
-    public Player player;
+    private Spawner spawner;
+    //public Player player;
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        DeadCheck();
-    }
-    public void DeadCheck(){
-//        if(player.notTouch == true){
-   //         gameOver = true;
-   //     }
+        
     }
 }

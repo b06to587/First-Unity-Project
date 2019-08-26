@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 3134226253266698048}
   m_LocalRotation: {x: 0, y: -0.309017, z: 0, w: 0.95105654}
   m_LocalPosition: {x: 10, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 7, z: 15}
+  m_LocalScale: {x: 1, y: 8, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -121,8 +121,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 396e67227693bc344b7aef6b4edcd828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  center: {fileID: 4433195444375316325, guid: 99da8755782adc5449a0b1729dfaf830, type: 3}
   Hp: 5
+  PickRandomHp: 0
   identitnumbe: 0
   isDestroy: 0
+<<<<<<< HEAD
   gameManager: {fileID: 312747205140413453, guid: a9abc358d1861a445ad399be1a397f84,
     type: 3}
+=======
+  Red: {fileID: 2100000, guid: fa12b5276be3d204fb61eceadf4a2ed1, type: 2}
+  Orange: {fileID: 2100000, guid: 1a63c28c58e58f54385a0b2e5607dd27, type: 2}
+  Yellow: {fileID: 2100000, guid: 0fc9e56ec0995a142888edd280970c9c, type: 2}
+  Green: {fileID: 2100000, guid: 1afd1f877a2ec964c8875ec82f1fb484, type: 2}
+  Blue: {fileID: 2100000, guid: 373e521a46fc30b448154e87c17cf4d9, type: 2}
+  Navy: {fileID: 2100000, guid: 832fd7844b76707438c3c433f2f05cc5, type: 2}
+  Purple: {fileID: 2100000, guid: 0e77f0d82caa1984ba5e175781745600, type: 2}
+  rainbow: 00000000010000000200000003000000040000000500000006000000
+  wallMoveSpeedMinMax: {x: 500, y: 1000}
+>>>>>>> first/master
