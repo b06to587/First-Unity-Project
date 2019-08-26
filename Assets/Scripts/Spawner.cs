@@ -12,18 +12,12 @@ public class Spawner : MonoBehaviour
     void Start(){
         StartCoroutine(createMorePentagon());
     }
-<<<<<<< HEAD
 
     // Update is called once per frame
     void Update()
     {   
         //Debug.Log(wallMoveSpeed);
-        WallMover();
-        WallShrink();
-=======
-    
-    void Update(){
->>>>>>> first/master
+      
         WallDestorychecker();
     }
 
