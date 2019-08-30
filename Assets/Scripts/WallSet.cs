@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WallSet : MonoBehaviour
 {
+    
     [SerializeField]
     public bool readyToDestroy = false;
     // Update is called once per frame
@@ -16,6 +17,7 @@ public class WallSet : MonoBehaviour
         for(int i = 0 ; i < 5; i++){
             if(transform.GetChild(i).GetComponentInChildren<Wall>().isDestroy)
                 readyToDestroy = true;
+               
         }
     }
 

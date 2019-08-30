@@ -22,10 +22,11 @@ public class Wall : MonoBehaviour
     private Vector2 wallMoveSpeedMinMax;
     private float wallMoveSpeed;
 
-    public int Score;//임시 스코어임
+    
+    public int GameScore=0;
     void Start()
     {
-        WallDificulty(Score);
+        WallDificulty(GameScore);
     }
 
     void Update()
@@ -35,7 +36,13 @@ public class Wall : MonoBehaviour
     }
     public void WallDificulty(int Score){
         Score= Score/100; // 정수로 범위를 만들기 위해서
+        Debug.Log(Score);
+
         switch (Score){
+        
+
+        case 0: giveToWallHpType(0,1);  
+        break;
         case 1: giveToWallHpType(0,2);
         break;
 
