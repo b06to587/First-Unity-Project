@@ -21,9 +21,11 @@ public class Wall : MonoBehaviour
     [SerializeField]
     private Vector2 wallMoveSpeedMinMax;
     private float wallMoveSpeed;
+
+    public int Score;//임시 스코어임
     void Start()
     {
-        giveToWallHpType();
+        WallDificulty(Score);
     }
 
     void Update()
@@ -31,7 +33,77 @@ public class Wall : MonoBehaviour
         WallMove();
         WallShrink();
     }
+    public void WallDificulty(int Score){
+        Score= Score/100; // 정수로 범위를 만들기 위해서
+        switch (Score){
+        case 1: giveToWallHpType(0,2);
+        break;
 
+        case 2: giveToWallHpType(0,3);
+        break;
+        
+        case 3: giveToWallHpType(0,4);
+        break;
+
+        case 4: giveToWallHpType(0,5);
+        break;
+        
+        case 5: giveToWallHpType(0,6);
+        break;
+
+        case 6: giveToWallHpType(0,7);
+        break;
+        
+        case 7: giveToWallHpType(1,3);
+        break;
+
+        case 8: giveToWallHpType(1,4);
+        break;
+        
+        case 9: giveToWallHpType(1,5);
+        break;
+
+        case 10: giveToWallHpType(1,6);
+        break;
+        
+        case 11: giveToWallHpType(1,7);
+        break;
+
+        case 12: giveToWallHpType(2,4);
+        break;
+        
+        case 13: giveToWallHpType(2,5);
+        break;
+
+        case 14: giveToWallHpType(2,6);
+        break;
+        
+        case 15: giveToWallHpType(2,7);
+        break;
+
+        case 16: giveToWallHpType(3,5);
+        break;
+        
+        case 17: giveToWallHpType(3,6);
+        break;
+
+        case 18: giveToWallHpType(3,7);
+        break;
+        
+        case 19: giveToWallHpType(4,6);
+        break;
+
+        case 20: giveToWallHpType(4,7);
+        break;
+
+
+        case 21: giveToWallHpType(0,7); //속도가 매우빠를것으로 기록용 스테이지 
+        break;
+        
+
+       
+        }
+    }
     public void OnTriggerEnter(Collider other)
     {
 
@@ -87,8 +159,10 @@ public class Wall : MonoBehaviour
         }
     }
 
-    public void giveToWallHpType(){
-       PickRandomHp= Random.Range(0, 7);
+    public void giveToWallHpType(int ran1, int ran2){
+
+       
+       PickRandomHp= Random.Range(ran1, ran2);
        switch(PickRandomHp){
            case 0 : 
            gameObject.GetComponent<MeshRenderer>().material= Red;
