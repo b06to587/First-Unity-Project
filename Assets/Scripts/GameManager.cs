@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     private Spawner spawner;
     public GameObject PauseMenu;
     public GameObject GameOverMenu;
+    public Collider Player;
     void Start()
     {
         
@@ -18,10 +19,10 @@ public class GameManager : MonoBehaviour
             GamePause();
         }
 
-        if(Menu.gameOver == true)
+        if(Ending.gameOver == true)
         {
             GameOver();
-            Menu.gameOver = false;
+            Ending.gameOver = false;
         }
     }
     
@@ -53,6 +54,8 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
         GameOverMenu.SetActive(true);
     }
+
+    
     
 
 }

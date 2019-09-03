@@ -1,16 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class Menu : MonoBehaviour
+public class Ending : MonoBehaviour
 {
-
     public static bool gameOver = false;
 
-    public void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider Player)
     {
-        if (other.tag == "Wall")     
+        if (Player.tag == "Wall")     
         {
             gameOver = true;
         }
