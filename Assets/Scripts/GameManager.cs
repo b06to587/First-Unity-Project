@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     private Spawner spawner;
     public GameObject PauseMenu;
-
+    public GameObject GameOverMenu;
     void Start()
     {
         
@@ -16,6 +16,12 @@ public class GameManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Escape)){
             GamePause();
+        }
+
+        if(Menu.gameOver == true)
+        {
+            GameOver();
+            Menu.gameOver = false;
         }
     }
     
@@ -42,6 +48,11 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Start");
     }
 
+    public void GameOver()
+    {
+        Time.timeScale = 0;
+        GameOverMenu.SetActive(true);
+    }
     
 
 }

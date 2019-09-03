@@ -23,8 +23,9 @@ public class Fire : MonoBehaviour
             //복제한다. //'Bullet'을 'FirePos.transform.position' 위치에 'FirePos.transform.rotation' 회전값으로.
             if (WeaponChange.WeaponNum == 0)
             {
-                Ani.Play("Swing2");
-                Debug.Log("fire Knife");
+                Instantiate(Bullet, FirePos0.transform.position, FirePos0.transform.rotation);
+                Ani.Play("Swing");
+                Debug.Log("Swing Knife");
             }
 
             else if(WeaponChange.WeaponNum == 1)

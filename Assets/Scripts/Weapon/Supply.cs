@@ -16,13 +16,6 @@ public class Supply : MonoBehaviour
     float time = 0;
     void Update()
     {
-       // if (supplyEnchantTime >= 5)
-        //{
-        //    Bullet.weaponDamage -= 10;
-        //    Destroy(this.gameObject);
-      //  }
-
-
         time += Time.deltaTime;
         if(time >= 5)
         {

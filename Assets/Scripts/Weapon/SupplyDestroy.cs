@@ -10,53 +10,20 @@ public class SupplyDestroy : MonoBehaviour
     void Start()
     {
         myRenderer = GetComponent<Renderer>();
+        Destroy(this.gameObject, 10);
     }
 
-    float supplyEnchantTime = 0;
-    float supplyTouch = 0;
-    void Update()
-    {
-        //if()
-        //Destroy(this.gameObject, );
-        
-        supplyEnchantTime += Time.deltaTime;
-        if(supplyTouch == 0)
-        {
-            Destroy(this.gameObject, 10);
-        }
-        else if(supplyTouch == 1)
-        {
-            //SupplyEnchantTime();
-            if(supplyEnchantTime > 5)
-            {
-                Bullet.weaponDamage -= 10;
-                supplyTouch = 3;
-            }
-        }
-        else if(supplyTouch == 3)
-        {
-            Destroy(this.gameObject, 5);
-        }
-        
+    public static bool supplyTouch = false;
 
-    }
 
     public void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            supplyTouch = 1;
+            supplyTouch = true;
             myRenderer.material.color = touchColor;
-            supplyEnchantTime = 0;
-
-            //Destroy(this.gameObject);
-            Bullet.weaponDamage += 10;
+            Destroy(this.gameObject, 1);
         }
-    }
-
-    private void SupplyEnchantTime()
-    {
-        supplyEnchantTime = 0;
     }
 
 }
