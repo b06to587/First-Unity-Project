@@ -18,21 +18,26 @@ public class Wall : MonoBehaviour
     public Material Navy;
     public Material Purple;
     public int[] rainbow = new int[7] {0,1,2,3,4,5,6};
+      public GameObject hit;
+    public GameObject explosion;
     [SerializeField]
     private Vector2 wallMoveSpeedMinMax;
     private float wallMoveSpeed;
 
     
-    public int GameScore=0;
+    public int GameScore=1000;
     void Start()
     {
-        WallDificulty(GameScore);
+        WallDificulty(1000);
     }
 
     void Update()
     {
         WallMove();
         WallShrink();
+        if(isDestroy==true){
+            Instantiate(hit,transform.position,transform.rotation);
+        }
     }
     public void WallDificulty(int Score){
         Score= Score/100; // 정수로 범위를 만들기 위해서
@@ -117,6 +122,7 @@ public class Wall : MonoBehaviour
         if (other.tag == "Bullet")     //충돌상대 필터링
         {
             Hp -= Bullet.weaponDamage;
+        
             Debug.Log(Hp);
         }
 
@@ -125,33 +131,41 @@ public class Wall : MonoBehaviour
             switch(PickRandomHp){
             case 0:
             isDestroy= true;
+            
+            Instantiate(explosion,transform.position,transform.rotation);
             break;
 
             case 1:
+            Instantiate(hit,transform.position,transform.rotation);
             PickRandomHp-=1;
             Hp=1;
             gameObject.GetComponent<MeshRenderer>().material= Red;
+    
             break;
 
             case 2:
+            Instantiate(hit,transform.position,transform.rotation);
             PickRandomHp-=1;
             Hp=2;
             gameObject.GetComponent<MeshRenderer>().material= Orange;
             break;
 
             case 3:
+            Instantiate(hit,transform.position,transform.rotation);
             PickRandomHp-=1;
             Hp=3;
             gameObject.GetComponent<MeshRenderer>().material= Yellow;
             break;
 
             case 4:
+            Instantiate(hit,transform.position,transform.rotation);
             PickRandomHp-=1;
             Hp=4;
             gameObject.GetComponent<MeshRenderer>().material= Green;
             break;
 
             case 5:
+            Instantiate(hit,transform.position,transform.rotation);
             PickRandomHp-=1;
             Hp=5;
             gameObject.GetComponent<MeshRenderer>().material= Blue;
@@ -159,6 +173,7 @@ public class Wall : MonoBehaviour
             
             case 6:
             PickRandomHp-=1;
+            
             Hp=6;
             gameObject.GetComponent<MeshRenderer>().material= Navy;
             break;
@@ -173,6 +188,7 @@ public class Wall : MonoBehaviour
        switch(PickRandomHp){
            case 0 : 
            gameObject.GetComponent<MeshRenderer>().material= Red;
+            
            Hp= 1;
             break;         
            case 1 :
