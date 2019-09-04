@@ -28,8 +28,8 @@ public class Supply : MonoBehaviour
 
     public void WeaponSupply()
     {
-        float supplyPosX = Random.Range(-18f, 18f);
-        float supplyPosZ = Random.Range(-18f, 18f);
+        float supplyPosX = Random.Range(-10f, 10f);
+        float supplyPosZ = Random.Range(-10f, 10f);
         Vector3 position = new Vector3(supplyPosX, 0.5f, supplyPosZ);
         Instantiate(Cube, position, Quaternion.identity);
     }
