@@ -116,8 +116,8 @@ MonoBehaviour:
   Navy: {fileID: 2100000, guid: 832fd7844b76707438c3c433f2f05cc5, type: 2}
   Purple: {fileID: 2100000, guid: 0e77f0d82caa1984ba5e175781745600, type: 2}
   rainbow: 00000000010000000200000003000000040000000500000006000000
-  hit: {fileID: 2668866490343932353, guid: 649ae9b65e555ba4796b3d8d932c3cc3, type: 3}
-  explosion: {fileID: 2418153905071879902, guid: 8944956ac15be8f469b7634204926dae,
+  hit: {fileID: 2668866490325489825, guid: 649ae9b65e555ba4796b3d8d932c3cc3, type: 3}
+  explosion: {fileID: 2542733330289761198, guid: 8944956ac15be8f469b7634204926dae,
     type: 3}
   wallMoveSpeedMinMax: {x: 1000, y: 700}
   GameScore: 0
