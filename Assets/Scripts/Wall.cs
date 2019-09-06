@@ -25,23 +25,21 @@ public class Wall : MonoBehaviour
     private float wallMoveSpeed;
 
     
-    public int GameScore=1000;
+    public static int GameScore=00;
     void Start()
     {
-        WallDificulty(1000);
+        WallDificulty(GameScore);
     }
 
     void Update()
     {
         WallMove();
         WallShrink();
-        if(isDestroy==true){
-            Instantiate(hit,transform.position,transform.rotation);
-        }
+     
     }
     public void WallDificulty(int Score){
         Score= Score/100; // 정수로 범위를 만들기 위해서
-        Debug.Log(Score);
+        Debug.Log("asdfasdfsdafdas"+Score);
 
         switch (Score){
         
@@ -132,7 +130,8 @@ public class Wall : MonoBehaviour
             {
                 case 0:
                     isDestroy = true;
-
+                    GameScore=GameScore+20;
+                    Debug.Log("점수추가됨"+GameScore);
                     Instantiate(explosion, transform.position, transform.rotation);
                     break;
 
