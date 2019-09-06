@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     private Spawner spawner;
     public GameObject PauseMenu;
     public GameObject GameOverMenu;
+    public Wall Wall;
     public Collider Player;
+    public Text UIScore;
+   
     void Start()
     {
         
@@ -24,6 +28,7 @@ public class GameManager : MonoBehaviour
             GameOver();
             Ending.gameOver = false;
         }
+        UIScore.text="Score :" +Wall.GameScore;
     }
     
     public void GameStart()

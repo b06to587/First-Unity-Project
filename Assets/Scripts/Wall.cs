@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Wall : MonoBehaviour
-{
+{   
+    
     [SerializeField]
     private GameObject center;
     public System.Action<Wall> OnWallReturn;
     public float Hp = 5; //Hp는 나중에 난수로다가 갔으면 좋겠네
-    public int PickRandomHp;
+    public int PickRandomHp=100;
     public bool isDestroy =false;
     public Material Red;
     public Material Orange;
@@ -29,17 +31,24 @@ public class Wall : MonoBehaviour
     void Start()
     {
         WallDificulty(GameScore);
+       
+        
     }
 
     void Update()
     {
         WallMove();
         WallShrink();
+        if(isDestroy == true){
+            Instantiate(explosion, transform.position, transform.rotation);
+        }
+       
+
      
     }
     public void WallDificulty(int Score){
         Score= Score/100; // 정수로 범위를 만들기 위해서
-        Debug.Log("asdfasdfsdafdas"+Score);
+    
 
         switch (Score){
         
@@ -132,7 +141,7 @@ public class Wall : MonoBehaviour
                     isDestroy = true;
                     GameScore=GameScore+20;
                     Debug.Log("점수추가됨"+GameScore);
-                    Instantiate(explosion, transform.position, transform.rotation);
+                    
                     break;
 
                 case 1:
@@ -235,6 +244,9 @@ public class Wall : MonoBehaviour
         float rate =  ((float)1/wallMoveSpeed);
         if(transform.localScale.z > 4)
         transform.localScale -= new Vector3(0,0,rate * 10.5f);
+    }
+    public int getScore(){
+        return GameScore;
     }
 
 }

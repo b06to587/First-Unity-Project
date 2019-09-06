@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WallSet : MonoBehaviour
-{
+{   
+
     
     [SerializeField]
     public bool readyToDestroy = false;
@@ -16,8 +17,10 @@ public class WallSet : MonoBehaviour
     private void CheckWall(){
         for(int i = 0 ; i < 5; i++){
             if(transform.GetChild(i).GetComponentInChildren<Wall>().isDestroy)
+
                 readyToDestroy = true; 
         }
     }
+
 
 }

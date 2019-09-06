@@ -43,17 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a3d2b76dc5d64140ae717055ff9d229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 312747205140413453, guid: a9abc358d1861a445ad399be1a397f84,
+  secondsBetweenSpawnsMinMax: {x: 0, y: 0}
+  efect: {fileID: 0}
+  prefabWallSet: {fileID: 7935682801998747473, guid: d3231b7497d7f1f45a72080052f709dc,
     type: 3}
-  Point: {fileID: 5289641791056232183, guid: 39ec75de068783741a5cfd720dd654c7, type: 3}
-  Wall: {fileID: 3134226253266698048, guid: 6925c20e10a7ed341838dadd993a068f, type: 3}
-  Points:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  standardPoint: {fileID: 0}
-  wallLength: 0
-  howManyPoin: []

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public Vector2 secondsBetweenSpawnsMinMax;  //벽 생성 최소 최대 속도
+    public GameObject efect;
     private float nextSpawnTime;
     [SerializeField]
     private GameObject prefabWallSet;
@@ -34,7 +35,9 @@ public class Spawner : MonoBehaviour
         foreach (var item in GameObject.FindGameObjectsWithTag("WallSet"))
         {
             if(item.GetComponent<WallSet>().readyToDestroy)
+          
             Destroy(item.gameObject);
+            
         }
             
     }

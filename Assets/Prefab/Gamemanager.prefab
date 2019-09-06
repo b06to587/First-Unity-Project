@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b122260fdf931b5438e2662851aaed4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Spawner: {fileID: 0}
-  wallobject: {fileID: 3134226253266698074, guid: 6925c20e10a7ed341838dadd993a068f,
-    type: 3}
-  player: {fileID: 0}
+  PauseMenu: {fileID: 0}
+  GameOverMenu: {fileID: 0}
+  Player: {fileID: 0}
+  UIScore: {fileID: 8041092789952360945, guid: 630b0530cc09a0e4394e1820fe478352, type: 3}

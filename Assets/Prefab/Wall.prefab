@@ -104,6 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 396e67227693bc344b7aef6b4edcd828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Score: {fileID: 8041092789952360945, guid: 630b0530cc09a0e4394e1820fe478352, type: 3}
   center: {fileID: 4433195444375316325, guid: 99da8755782adc5449a0b1729dfaf830, type: 3}
   Hp: 5
   PickRandomHp: 0
@@ -120,4 +121,3 @@ MonoBehaviour:
   explosion: {fileID: 2542733330289761198, guid: 8944956ac15be8f469b7634204926dae,
     type: 3}
   wallMoveSpeedMinMax: {x: 1000, y: 700}
-  GameScore: 0
