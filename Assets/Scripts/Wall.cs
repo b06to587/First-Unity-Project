@@ -123,7 +123,6 @@ public class Wall : MonoBehaviour
         if (other.tag == "Bullet")     //충돌상대 필터링
         {
             Hp -= Bullet.weaponDamage;
-        
             Debug.Log(Hp);
         }
 
