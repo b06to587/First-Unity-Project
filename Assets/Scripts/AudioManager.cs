@@ -41,7 +41,6 @@ public class AudioManager : MonoBehaviour
     public void SetVolume(float volumePercent){   //볼륨을 설정하는 매소드 
  
         masterVolumePercent = volumePercent;
- 
         musicSources.volume = masterVolumePercent;
 
         PlayerPrefs.SetFloat("master vol",masterVolumePercent);         // 마스터 볼륨 퍼센트로 결정
