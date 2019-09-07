@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public GameObject PauseMenu;
     public GameObject GameOverMenu;
     public Wall Wall;
+    public WallSet WallSet;
     public Collider Player;
     public Text UIScore;
     public Text UIhightScore;
@@ -24,9 +25,9 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {   
-        if(hightScore<=Wall.GameScore){
-            hightScore =Wall.GameScore;
-            UIhightScore.text="BEST :" +Wall.GameScore;
+        if(hightScore<=WallSet.gamseScore){
+            hightScore =WallSet.gamseScore;
+            UIhightScore.text="BEST :" +WallSet.gamseScore;
         }
 
 
@@ -39,8 +40,8 @@ public class GameManager : MonoBehaviour
             GameOver();
             Ending.gameOver = false;
         }
-        UIScore.text="Score :" +Wall.GameScore;
-        FinalScore.text = "Score :" +Wall.GameScore;
+        UIScore.text="Score :" +WallSet.gamseScore;
+        FinalScore.text = "Score :" +WallSet.gamseScore;
         PlayerPrefs.SetInt("BestScore",hightScore);
     }
     
@@ -49,10 +50,10 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("main");
         Time.timeScale = 1;
         
-        if(hightScore<=Wall.GameScore){
-            hightScore =Wall.GameScore;
+        if(hightScore<=WallSet.gamseScore){
+            hightScore =WallSet.gamseScore;
         }
-        Wall.GameScore =0;
+        WallSet.gamseScore =0;
         
     }
 

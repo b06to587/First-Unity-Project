@@ -11,6 +11,7 @@ public class Wall : MonoBehaviour
     public System.Action<Wall> OnWallReturn;
     public float Hp = 5; //Hp는 나중에 난수로다가 갔으면 좋겠네
     public int PickRandomHp=100;
+    public WallSet wallSet;
     public bool isDestroy =false;
     public Material Red;
     public Material Orange;
@@ -27,7 +28,7 @@ public class Wall : MonoBehaviour
     private float wallMoveSpeed;
     
     
-    public static int GameScore=00;
+    public static int GameScore;
     void Start()
     {
         WallDificulty(GameScore);
@@ -37,6 +38,7 @@ public class Wall : MonoBehaviour
     {
         WallMove();
         WallShrink();
+        GameScore=WallSet.gamseScore;
     }
     public void WallDificulty(int Score){
         Score= Score/100; // 정수로 범위를 만들기 위해서
@@ -132,8 +134,6 @@ public class Wall : MonoBehaviour
             {
                 case 0:
                     isDestroy = true;
-                    GameScore=GameScore+20;
-                    Debug.Log("점수추가됨"+GameScore);
                     break;
 
                 case 1:
