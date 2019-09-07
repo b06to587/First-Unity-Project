@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         UIScore.text ="0";
+        hightScore=PlayerPrefs.GetInt("BestScore");
         UIhightScore.text ="BEST :"+ hightScore;
     }
 
@@ -40,6 +41,7 @@ public class GameManager : MonoBehaviour
         }
         UIScore.text="Score :" +Wall.GameScore;
         FinalScore.text = "Score :" +Wall.GameScore;
+        PlayerPrefs.SetInt("BestScore",hightScore);
     }
     
     public void GameStart()
