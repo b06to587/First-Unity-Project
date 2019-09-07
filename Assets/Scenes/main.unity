@@ -947,7 +947,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 876a9efcae3245e4ab66feeb8f437976, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 876a9efcae3245e4ab66feeb8f437976, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1030,7 +1030,7 @@ Transform:
   m_LocalPosition: {x: 0, y: -1.493, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1728947220}
+  - {fileID: 1306875398}
   - {fileID: 651559320}
   - {fileID: 1481154950}
   m_Father: {fileID: 923220452}
@@ -1937,12 +1937,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 936914276}
   m_CullTransparentMesh: 0
---- !u!1 &1007024619 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: d4098477c18803643ad98caccb29cb7c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1728947219}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1093714019
 GameObject:
   m_ObjectHideFlags: 0
@@ -2375,6 +2369,89 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1136909723}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1306875397
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1306875398}
+  - component: {fileID: 1306875401}
+  - component: {fileID: 1306875400}
+  - component: {fileID: 1306875399}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1306875398
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306875397}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.02, y: 1.32, z: -0.06}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1728947220}
+  m_Father: {fileID: 666773356}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1306875399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306875397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e422ba7692840848a48c160bde8ed6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bullet: {fileID: 3256906717315335529, guid: 4139c348497630a4783ca8e98fa2a39a, type: 3}
+  FirePos0: {fileID: 1133884989}
+  Ani: {fileID: 1306875401}
+--- !u!114 &1306875400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306875397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42052e186dbe5b24f97a3ed03c163c43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Knife: {fileID: 1306875397}
+  BitGun: {fileID: 1817890096}
+  MachineGun: {fileID: 1484811274}
+--- !u!95 &1306875401
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306875397}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6ebc87dc51613a240aaf9d402b30397e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1390885241
 GameObject:
   m_ObjectHideFlags: 0
@@ -2571,61 +2648,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1422239611}
   m_CullTransparentMesh: 0
---- !u!1 &1428134432 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100002, guid: d4098477c18803643ad98caccb29cb7c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1728947219}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1428134436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1428134432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42052e186dbe5b24f97a3ed03c163c43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Knife: {fileID: 1007024619}
-  BitGun: {fileID: 1817890096}
-  MachineGun: {fileID: 1484811274}
---- !u!114 &1428134437
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1428134432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e422ba7692840848a48c160bde8ed6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Bullet: {fileID: 3256906717315335529, guid: 4139c348497630a4783ca8e98fa2a39a, type: 3}
-  FirePos0: {fileID: 1133884989}
-  Ani: {fileID: 1428134438}
---- !u!95 &1428134438
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1428134432}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 65f128bca4e65ed419c26ddd1b0363ce, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1481154949
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2671,7 +2693,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: c3b88fed61c0e7b4b9404b30f14868fc, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: c3b88fed61c0e7b4b9404b30f14868fc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2723,7 +2745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42052e186dbe5b24f97a3ed03c163c43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Knife: {fileID: 1007024619}
+  Knife: {fileID: 1306875397}
   BitGun: {fileID: 1817890096}
   MachineGun: {fileID: 1484811274}
 --- !u!114 &1484811276
@@ -2897,7 +2919,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 666773356}
+    m_TransformParent: {fileID: 1306875398}
     m_Modifications:
     - target: {fileID: 100000, guid: d4098477c18803643ad98caccb29cb7c, type: 3}
       propertyPath: m_Name
@@ -2909,15 +2931,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d4098477c18803643ad98caccb29cb7c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.41
+      value: 0.42999998
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d4098477c18803643ad98caccb29cb7c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5739408
+      value: 0.2539407
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d4098477c18803643ad98caccb29cb7c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.88856983
+      value: 0.94856983
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d4098477c18803643ad98caccb29cb7c, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2957,11 +2979,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d4098477c18803643ad98caccb29cb7c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 0.2999998
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d4098477c18803643ad98caccb29cb7c, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.3
+      value: 0.3000002
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: d4098477c18803643ad98caccb29cb7c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3165,7 +3187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42052e186dbe5b24f97a3ed03c163c43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Knife: {fileID: 1007024619}
+  Knife: {fileID: 1306875397}
   BitGun: {fileID: 1817890096}
   MachineGun: {fileID: 1484811274}
 --- !u!114 &1817890098
