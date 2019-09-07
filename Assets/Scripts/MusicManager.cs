@@ -20,7 +20,7 @@ public class MusicManager : MonoBehaviour
     }
     void PlayMusic(){
         AudioClip clipToPlay = null;
-        if(sceneName =="main"){
+        if(sceneName =="Start"){
             clipToPlay = mainTheme;
         }
     
