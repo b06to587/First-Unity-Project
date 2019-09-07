@@ -9,17 +9,28 @@ public class GameManager : MonoBehaviour
     public GameObject PauseMenu;
     public GameObject GameOverMenu;
     public Wall Wall;
+    public WallSet WallSet;
     public Collider Player;
     public Text UIScore;
+    public Text UIhightScore;
     public Text FinalScore;
+    public static int hightScore;
    
     void Start()
     {
-        
+        UIScore.text ="0";
+        hightScore=PlayerPrefs.GetInt("BestScore");
+        UIhightScore.text ="BEST :"+ hightScore;
     }
 
     void Update()
-    {
+    {   
+        if(hightScore<=WallSet.gamseScore){
+            hightScore =WallSet.gamseScore;
+            UIhightScore.text="BEST :" +WallSet.gamseScore;
+        }
+
+
         if(Input.GetKeyDown(KeyCode.Escape)){
             GamePause();
         }
@@ -29,14 +40,21 @@ public class GameManager : MonoBehaviour
             GameOver();
             Ending.gameOver = false;
         }
-        UIScore.text="Score :" +Wall.GameScore;
-        FinalScore.text = "Score :" +Wall.GameScore;
+        UIScore.text="Score :" +WallSet.gamseScore;
+        FinalScore.text = "Score :" +WallSet.gamseScore;
+        PlayerPrefs.SetInt("BestScore",hightScore);
     }
     
     public void GameStart()
     {
         SceneManager.LoadScene("main");
         Time.timeScale = 1;
+        
+        if(hightScore<=WallSet.gamseScore){
+            hightScore =WallSet.gamseScore;
+        }
+        WallSet.gamseScore =0;
+        
     }
 
     public void GamePause()
@@ -54,11 +72,13 @@ public class GameManager : MonoBehaviour
     public void GameEnd()
     {
         SceneManager.LoadScene("Start");
+        
     }
 
     public void GameOver()
     {
         Time.timeScale = 0;
         GameOverMenu.SetActive(true);
-    }
+       
+}
 }

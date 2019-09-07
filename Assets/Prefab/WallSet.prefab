@@ -48,9 +48,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81520e370b91ac643b6c90007babd1e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  combo: 0
+  compareRed: {fileID: 2100000, guid: fa12b5276be3d204fb61eceadf4a2ed1, type: 2}
   explosion: {fileID: 2542733330289761198, guid: 8944956ac15be8f469b7634204926dae,
     type: 3}
-  readyToDestroy: 0
 --- !u!1001 &3135432370706634913
 PrefabInstance:
   m_ObjectHideFlags: 0

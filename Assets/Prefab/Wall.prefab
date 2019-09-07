@@ -104,10 +104,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 396e67227693bc344b7aef6b4edcd828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Score: {fileID: 8041092789952360945, guid: 630b0530cc09a0e4394e1820fe478352, type: 3}
   center: {fileID: 4433195444375316325, guid: 99da8755782adc5449a0b1729dfaf830, type: 3}
   Hp: 5
   PickRandomHp: 0
+  wallSet: {fileID: 780758708083037793, guid: 6bf9eb60b82f5204ab58c9e302c2cca2, type: 3}
   isDestroy: 0
   Red: {fileID: 2100000, guid: fa12b5276be3d204fb61eceadf4a2ed1, type: 2}
   Orange: {fileID: 2100000, guid: 1a63c28c58e58f54385a0b2e5607dd27, type: 2}
