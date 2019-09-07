@@ -22,7 +22,7 @@ public class WallSet : MonoBehaviour
             {
                 readyToDestroy = true; 
             }
-        }
+        }   
     }
 
     private void DestroyWall(){

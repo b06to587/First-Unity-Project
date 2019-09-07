@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
    
     void Start()
     {
-        
+        UIScore.text ="0";
     }
 
     void Update()
@@ -37,6 +37,8 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("main");
         Time.timeScale = 1;
+        Wall.GameScore =0;
+        
     }
 
     public void GamePause()
@@ -54,11 +56,13 @@ public class GameManager : MonoBehaviour
     public void GameEnd()
     {
         SceneManager.LoadScene("Start");
+        
     }
 
     public void GameOver()
     {
         Time.timeScale = 0;
         GameOverMenu.SetActive(true);
-    }
+       
+}
 }
