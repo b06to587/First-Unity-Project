@@ -1802,12 +1802,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 936914276}
   m_CullTransparentMesh: 0
---- !u!1 &1007024619 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: d4098477c18803643ad98caccb29cb7c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1728947219}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1093714019
 GameObject:
   m_ObjectHideFlags: 0
@@ -2584,7 +2578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42052e186dbe5b24f97a3ed03c163c43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Knife: {fileID: 1007024619}
+  Knife: {fileID: 1306875397}
   BitGun: {fileID: 1817890096}
   MachineGun: {fileID: 1484811274}
 --- !u!114 &1484811276
@@ -3026,7 +3020,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42052e186dbe5b24f97a3ed03c163c43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Knife: {fileID: 1007024619}
+  Knife: {fileID: 1306875397}
   BitGun: {fileID: 1817890096}
   MachineGun: {fileID: 1484811274}
 --- !u!114 &1817890098
