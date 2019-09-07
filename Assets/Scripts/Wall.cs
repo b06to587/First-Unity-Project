@@ -11,6 +11,7 @@ public class Wall : MonoBehaviour
     public System.Action<Wall> OnWallReturn;
     public float Hp = 5; //Hp는 나중에 난수로다가 갔으면 좋겠네
     public int PickRandomHp=100;
+    public WallSet wallSet;
     public bool isDestroy =false;
     public Material Red;
     public Material Orange;
@@ -26,7 +27,8 @@ public class Wall : MonoBehaviour
     private Vector2 wallMoveSpeedMinMax;
     private float wallMoveSpeed;
     
-    public static int GameScore=00;
+    
+    public static int GameScore;
     void Start()
     {
         WallDificulty(GameScore);
@@ -36,6 +38,7 @@ public class Wall : MonoBehaviour
     {
         WallMove();
         WallShrink();
+        GameScore=WallSet.gamseScore;
     }
     public void WallDificulty(int Score){
         Score= Score/100; // 정수로 범위를 만들기 위해서
@@ -125,17 +128,16 @@ public class Wall : MonoBehaviour
         }
 
         if (Hp <= 0)
-        {
+        {   
+            Vector3 hitposition = new Vector3(transform.position.x,transform.position.y,transform.position.z);
             switch (PickRandomHp)
             {
                 case 0:
                     isDestroy = true;
-                    GameScore=GameScore+20;
-                    Debug.Log("점수추가됨"+GameScore);
                     break;
 
                 case 1:
-                    Instantiate(hit, GetPosition(), transform.rotation);
+                    Instantiate(hit, transform.position, transform.rotation);
                     PickRandomHp -= 1;
                     Hp = 1;
                     gameObject.GetComponent<MeshRenderer>().material = Red;
@@ -143,28 +145,28 @@ public class Wall : MonoBehaviour
                     break;
 
                 case 2:
-                    Instantiate(hit, hit.transform.position, hit.transform.rotation);
+                    Instantiate(hit, transform.position, hit.transform.rotation);
                     PickRandomHp -= 1;
                     Hp = 2;
                     gameObject.GetComponent<MeshRenderer>().material = Orange;
                     break;
 
                 case 3:
-                     Instantiate(hit, hit.transform.position, hit.transform.rotation);
+                     Instantiate(hit, transform.position, hit.transform.rotation);
                     PickRandomHp -= 1;
                     Hp = 3;
                     gameObject.GetComponent<MeshRenderer>().material = Yellow;
                     break;
 
                 case 4:
-                     Instantiate(hit, hit.transform.position, hit.transform.rotation);
+                     Instantiate(hit, transform.position, hit.transform.rotation);
                     PickRandomHp -= 1;
                     Hp = 4;
                     gameObject.GetComponent<MeshRenderer>().material = Green;
                     break;
 
                 case 5:
-                     Instantiate(hit, hit.transform.position, hit.transform.rotation);
+                     Instantiate(hit, transform.position, hit.transform.rotation);
                     PickRandomHp -= 1;
                     Hp = 5;
                     gameObject.GetComponent<MeshRenderer>().material = Blue;
