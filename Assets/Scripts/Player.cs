@@ -5,13 +5,6 @@ using UnityEngine;
 [RequireComponent(typeof (Rigidbody))]
 public class Player : MonoBehaviour
 {
-    public Joystick joystick;
-    [SerializeField]
-    public bool notTouch = true;
-    //움직이는 속도
-    [SerializeField]
-    private float walkSpeed;
-
     private Rigidbody myRigidBody;
 
     //카메라
@@ -28,21 +21,11 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
         GroundCheck();
     }
-    void FixedUpdate()
-    {
-        Move();
-    }
-
      //움직이는 함수
-    private void Move(){
-        Vector3 direction = Vector3.forward * joystick.Vertical + Vector3.right * joystick.Horizontal;
-        if (direction != Vector3.zero)
-        myRigidBody.AddForce(direction * walkSpeed * Time.fixedDeltaTime, ForceMode.VelocityChange);
-    }
 
+  
     //바닥체크
     private void GroundCheck(){
         Ray ray = viewCamera.ScreenPointToRay (Input.mousePosition);
@@ -60,4 +43,5 @@ public class Player : MonoBehaviour
         Vector3 heightCorrectedPoint = new Vector3(lookPoint.x, transform.position.y, lookPoint.z);
         transform.LookAt(heightCorrectedPoint);
     }
+
 }
