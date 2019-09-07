@@ -14,16 +14,10 @@ public class Spawner : MonoBehaviour
         StartCoroutine(createMorePentagon());
     }
 
-    // Update is called once per frame
-    void Update()
-    {   
-        //Debug.Log(wallMoveSpeed);
-      
-        WallDestorychecker();
-    }
 
     IEnumerator createMorePentagon(){
-        while(true){
+        while(true)
+        {
             GameObject wallPrefab = Instantiate(prefabWallSet,new Vector3(1.3f,3f,1.1f), Quaternion.identity) as GameObject;
             float secondsBetweenSpawns = Mathf.Lerp(secondsBetweenSpawnsMinMax.y,secondsBetweenSpawnsMinMax.x, Difficulty.GetDifficultyPercent());
             nextSpawnTime = secondsBetweenSpawns;
@@ -31,14 +25,5 @@ public class Spawner : MonoBehaviour
         }
     }
 
-    private void WallDestorychecker(){
-        foreach (var item in GameObject.FindGameObjectsWithTag("WallSet"))
-        {
-            if(item.GetComponent<WallSet>().readyToDestroy)
-          
-            Destroy(item.gameObject);
-            
-        }
-            
-    }
+    
 }

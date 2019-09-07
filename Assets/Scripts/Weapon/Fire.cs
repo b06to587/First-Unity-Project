@@ -33,6 +33,7 @@ public class Fire : MonoBehaviour
             {
                 Instantiate(Bullet, FirePos0.transform.position, FirePos0.transform.rotation);
                 Debug.Log("Fire BitGun");
+                AudioManager.instance.PlaySound2D("GunSound");
             }
 
             else if (WeaponChange.WeaponNum == 2)

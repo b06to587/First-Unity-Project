@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public Wall Wall;
     public Collider Player;
     public Text UIScore;
+    public Text FinalScore;
    
     void Start()
     {
@@ -29,6 +30,7 @@ public class GameManager : MonoBehaviour
             Ending.gameOver = false;
         }
         UIScore.text="Score :" +Wall.GameScore;
+        FinalScore.text = "Score :" +Wall.GameScore;
     }
     
     public void GameStart()
@@ -59,8 +61,4 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
         GameOverMenu.SetActive(true);
     }
-
-    
-    
-
 }
