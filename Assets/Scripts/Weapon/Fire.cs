@@ -7,6 +7,7 @@ public class Fire : MonoBehaviour
     public GameObject Bullet;
     public GameObject Bullet1;
     public Transform FirePos0;
+    public Transform FirePos1;
 
     public Animator Ani;
 
@@ -17,6 +18,7 @@ public class Fire : MonoBehaviour
             if (WeaponChange.WeaponNum == 0)
             {
                 Instantiate(Bullet, FirePos0.transform.position, FirePos0.transform.rotation);
+                Instantiate(Bullet, FirePos1.transform.position, FirePos1.transform.rotation);
                 Ani.SetTrigger("Attack");
                 AudioManager.instance.PlaySound2D("KnifeSound");
                 Debug.Log("Swing Knife");

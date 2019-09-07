@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public static float weaponKnifeDamage = 0.8f;
+    public static float weaponKnifeDamage = 0.4f;
     public static float weaponKnifeDistance = 0.047f;
     public static float weaponBitGunDamage = 0.8f;
     public static float weaponBitGunDistance = 0.1f;
