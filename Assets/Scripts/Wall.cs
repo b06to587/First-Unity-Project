@@ -26,6 +26,7 @@ public class Wall : MonoBehaviour
     private Vector2 wallMoveSpeedMinMax;
     private float wallMoveSpeed;
     
+    
     public static int GameScore=00;
     void Start()
     {
@@ -125,7 +126,8 @@ public class Wall : MonoBehaviour
         }
 
         if (Hp <= 0)
-        {
+        {   
+            Vector3 hitposition = new Vector3(transform.position.x,transform.position.y,transform.position.z);
             switch (PickRandomHp)
             {
                 case 0:
@@ -135,7 +137,7 @@ public class Wall : MonoBehaviour
                     break;
 
                 case 1:
-                    Instantiate(hit, GetPosition(), transform.rotation);
+                    Instantiate(hit, transform.position, transform.rotation);
                     PickRandomHp -= 1;
                     Hp = 1;
                     gameObject.GetComponent<MeshRenderer>().material = Red;
@@ -143,28 +145,28 @@ public class Wall : MonoBehaviour
                     break;
 
                 case 2:
-                    Instantiate(hit, hit.transform.position, hit.transform.rotation);
+                    Instantiate(hit, transform.position, hit.transform.rotation);
                     PickRandomHp -= 1;
                     Hp = 2;
                     gameObject.GetComponent<MeshRenderer>().material = Orange;
                     break;
 
                 case 3:
-                     Instantiate(hit, hit.transform.position, hit.transform.rotation);
+                     Instantiate(hit, transform.position, hit.transform.rotation);
                     PickRandomHp -= 1;
                     Hp = 3;
                     gameObject.GetComponent<MeshRenderer>().material = Yellow;
                     break;
 
                 case 4:
-                     Instantiate(hit, hit.transform.position, hit.transform.rotation);
+                     Instantiate(hit, transform.position, hit.transform.rotation);
                     PickRandomHp -= 1;
                     Hp = 4;
                     gameObject.GetComponent<MeshRenderer>().material = Green;
                     break;
 
                 case 5:
-                     Instantiate(hit, hit.transform.position, hit.transform.rotation);
+                     Instantiate(hit, transform.position, hit.transform.rotation);
                     PickRandomHp -= 1;
                     Hp = 5;
                     gameObject.GetComponent<MeshRenderer>().material = Blue;
