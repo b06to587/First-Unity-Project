@@ -32,6 +32,7 @@ public class WallSet : MonoBehaviour
             {
                 Instantiate(explosion, transform.GetChild(i).GetComponentInChildren<Wall>().transform.position, transform.GetChild(i).GetComponentInChildren<Wall>().transform.rotation);
                 Destroy(transform.GetChild(i).GetComponentInChildren<Wall>().gameObject);
+                Destroy(this.gameObject);
                 readyToDestroy = false;
             }     
         }

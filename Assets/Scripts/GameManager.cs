@@ -11,15 +11,24 @@ public class GameManager : MonoBehaviour
     public Wall Wall;
     public Collider Player;
     public Text UIScore;
+    public Text UIhightScore;
     public Text FinalScore;
+    public static int hightScore;
    
     void Start()
     {
         UIScore.text ="0";
+        UIhightScore.text ="BEST :"+ hightScore;
     }
 
     void Update()
-    {
+    {   
+        if(hightScore<=Wall.GameScore){
+            hightScore =Wall.GameScore;
+            UIhightScore.text="BEST :" +Wall.GameScore;
+        }
+
+
         if(Input.GetKeyDown(KeyCode.Escape)){
             GamePause();
         }
@@ -37,6 +46,10 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("main");
         Time.timeScale = 1;
+        
+        if(hightScore<=Wall.GameScore){
+            hightScore =Wall.GameScore;
+        }
         Wall.GameScore =0;
         
     }
