@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8391080252310261656
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8391080252310261604}
+  - component: {fileID: 8391080252310261607}
+  - component: {fileID: 8391080252310261606}
+  - component: {fileID: 8391080252310261657}
+  - component: {fileID: 8391080252310261605}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8391080252310261604
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8391080252310261656}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.14550781, y: 1.0859375, z: 9.216259}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &8391080252310261607
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8391080252310261656}
+  m_Enabled: 1
+--- !u!114 &8391080252310261606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8391080252310261656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4304862b5ec094548b2d2d9e0937b4b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8391080252310261657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8391080252310261656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1050e5cf7a031b9428ea928ef6e0bae5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundGroups:
+  - groupID: KnifeSound
+    group:
+    - {fileID: 8300000, guid: 105349940cb697c4681868b5707d2049, type: 3}
+  - groupID: WallExplosion
+    group:
+    - {fileID: 8300000, guid: 1dec0cd01b1387849893b045c9e7b3f0, type: 3}
+  - groupID: GunSound
+    group:
+    - {fileID: 8300000, guid: 3b58777858935bf4aa151634788ed51d, type: 3}
+  - groupID: cristal
+    group:
+    - {fileID: 8300000, guid: b28e8445d9ed59a4782942f0395a725f, type: 3}
+--- !u!114 &8391080252310261605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8391080252310261656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd7dc3c1b2561eb408a0dd68fd08ba9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainTheme: {fileID: 8300000, guid: df3bee0af148cbb49808eb2a1bd337a4, type: 3}
