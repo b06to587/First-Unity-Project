@@ -5,14 +5,14 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public static float weaponKnifeDamage = 0.8f;
-    public static float weaponKnifeDistance = 0.047f;
+    public static float weaponKnifeDistance = 0.05f;
     public static float weaponBitGunDamage = 0.8f;
     public static float weaponBitGunDistance = 0.1f;
     public static float weaponMachineGunDamage = 0.8f;
     public static float weaponMachineGunDistance = 0.05f;
 
-    public static float weaponDamage = weaponKnifeDamage;
-    public static float weaponDistance = weaponKnifeDistance;
+    public static float weaponDamage = weaponBitGunDamage;
+    public static float weaponDistance = weaponBitGunDistance;
 
     void Start()
     {

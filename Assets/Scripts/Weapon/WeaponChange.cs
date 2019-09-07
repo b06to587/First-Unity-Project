@@ -18,12 +18,12 @@ public class WeaponChange : MonoBehaviour
             if(WeaponNum < 2)
             {
                 WeaponNum += 1;
-                Change();
+                Change2();
                 SupplyDestroy.supplyTouch = false;
             }
             else if(WeaponNum >= 2)
             {
-                Change();
+                Change2();
                 SupplyDestroy.supplyTouch = false;
             }
         }
@@ -36,19 +36,19 @@ public class WeaponChange : MonoBehaviour
         if(weaponEnchantTime > 5 && WeaponNum == 1)
         {
             WeaponNum -= 1;
-            Change();
+            Change2();
         }
 
         if(weaponEnchantTime > 5 && WeaponNum == 2)
         {
             WeaponNum -= 2;
-            Change();
+            Change2();
         }
     }
 
     public static int WeaponNum = 0;
 
-    public void Change()
+    public void Change2()
     {
         if(WeaponNum == 0)
         {
