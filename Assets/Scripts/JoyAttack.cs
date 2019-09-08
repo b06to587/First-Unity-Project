@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class JoyButton : MonoBehaviour
+public class JoyAttack : MonoBehaviour
 {
     public Transform Player;
     public Transform Stick;

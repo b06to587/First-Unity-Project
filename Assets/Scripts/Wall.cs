@@ -116,6 +116,9 @@ public class Wall : MonoBehaviour
 
        
         }
+        if(Score>=21){
+            giveToWallHpType(0,7);
+        }
     }
     public void OnTriggerEnter(Collider other)
     {
