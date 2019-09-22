@@ -8,7 +8,7 @@ public class WeaponChange : MonoBehaviour
     public GameObject BitGun;
     public GameObject MachineGun;
     
-    float weaponEnchantTime = 0;
+    public static float weaponEnchantTime = 0;
     void Update()
     {
         weaponEnchantTime += Time.deltaTime;

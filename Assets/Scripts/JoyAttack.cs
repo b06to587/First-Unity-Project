@@ -15,6 +15,8 @@ public class JoyAttack : MonoBehaviour
     public Vector3 Position;
     [HideInInspector]
     protected bool Pressed;
+    public Vector3 playerEulerAngles;
+    public GameObject Wepon;
    void Start()
     {
         Radius = GetComponent<RectTransform>().sizeDelta.y * 0.5f;
@@ -31,8 +33,9 @@ public class JoyAttack : MonoBehaviour
     {
         if (MoveFlag)
            
+            playerEulerAngles=new Vector3(0, Mathf.Atan2(JoyVec.x, JoyVec.y) * Mathf.Rad2Deg, 0);
+            Player.eulerAngles = new Vector3(0, Mathf.Atan2(JoyVec.x, JoyVec.y) * Mathf.Rad2Deg, 0);
             
-            Player.transform.position+=Position*Time.deltaTime*10 ;
     }
  
     // 드래그
@@ -59,13 +62,18 @@ public class JoyAttack : MonoBehaviour
         
         Position = new Vector3(JoyVec.x,JoyVec.z,JoyVec.y);
         Debug.Log(Position);
+        if(Position.x==1.0||Position.y==1.0||Position.z==1.0){
+
+            //어택
+        }
     }
  
     // 드래그 끝.
     public void DragEnd()
     {
         Stick.position = StickFirstPos; // 스틱을 원래의 위치로.
-        JoyVec = Vector3.zero;          // 방향을 0으로.
+                  // 방향을 0으로.
         MoveFlag = false;
+        Player.eulerAngles=playerEulerAngles;
     }
 }
