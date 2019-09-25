@@ -14,6 +14,7 @@ public class WeaponUpgrade : MonoBehaviour
 
     void Update()
     {
+        /* 
         if (Input.GetMouseButtonDown(1))
         {
             Debug.Log("Distance Upgrade");
@@ -25,6 +26,7 @@ public class WeaponUpgrade : MonoBehaviour
             Debug.Log("Damage Upgrade");
             DamageUpgrade();
         }
+        */
     }
 
 

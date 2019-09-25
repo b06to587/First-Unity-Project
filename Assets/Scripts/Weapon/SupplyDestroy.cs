@@ -10,7 +10,7 @@ public class SupplyDestroy : MonoBehaviour
     void Start()
     {
         myRenderer = GetComponent<Renderer>();
-        Destroy(this.gameObject, 10);
+        Destroy(this.gameObject, 20);
     }
 
     public static bool supplyTouch = false;

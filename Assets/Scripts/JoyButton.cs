@@ -32,7 +32,7 @@ public class JoyButton : MonoBehaviour
         if (MoveFlag)
            
             
-            Player.transform.position+=Position*Time.deltaTime*10 ;
+            Player.transform.position+=Position*Time.deltaTime*7 ;
     }
  
     // 드래그

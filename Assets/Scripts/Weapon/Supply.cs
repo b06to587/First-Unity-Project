@@ -17,7 +17,7 @@ public class Supply : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
-        if(time >= 5)
+        if(time >= 10)
         {
             time = 0;
             WeaponSupply();

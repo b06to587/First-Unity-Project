@@ -33,13 +33,13 @@ public class WeaponChange : MonoBehaviour
             weaponEnchantTime = 0;
         }
 
-        if(weaponEnchantTime > 5 && WeaponNum == 1)
+        if(weaponEnchantTime > 20 && WeaponNum == 1)
         {
             WeaponNum -= 1;
             Change();
         }
 
-        if(weaponEnchantTime > 5 && WeaponNum == 2)
+        if(weaponEnchantTime > 20 && WeaponNum == 2)
         {
             WeaponNum -= 2;
             Change();
